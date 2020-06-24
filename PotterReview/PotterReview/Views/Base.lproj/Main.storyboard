@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vra-mk-C0b">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--People Table View Controller-->
+        <scene sceneID="TtS-TC-FTd">
+            <objects>
+                <tableViewController id="Vra-mk-C0b" customClass="PeopleTableViewController" customModule="PotterReview" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="H7O-Yo-qvH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="peopleCell" id="rvB-xt-aGS" customClass="PeopleTableViewCell" customModule="PotterReview" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="66"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rvB-xt-aGS" id="4MN-Og-H2f">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PI6-Gt-ICe">
+                                            <rect key="frame" x="20.5" y="8" width="373" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8F-ze-Man">
+                                            <rect key="frame" x="20.5" y="47" width="373" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PI6-Gt-ICe" firstAttribute="top" secondItem="4MN-Og-H2f" secondAttribute="top" constant="8" id="MSk-ci-QGt"/>
+                                        <constraint firstItem="PI6-Gt-ICe" firstAttribute="width" secondItem="4MN-Og-H2f" secondAttribute="width" multiplier="0.9" id="NdJ-9V-eTO"/>
+                                        <constraint firstItem="A8F-ze-Man" firstAttribute="width" secondItem="4MN-Og-H2f" secondAttribute="width" multiplier="0.9" id="W3L-iX-fu4"/>
+                                        <constraint firstItem="PI6-Gt-ICe" firstAttribute="centerX" secondItem="4MN-Og-H2f" secondAttribute="centerX" id="eZn-Kl-66j"/>
+                                        <constraint firstItem="A8F-ze-Man" firstAttribute="top" secondItem="PI6-Gt-ICe" secondAttribute="bottom" constant="8" id="o0C-Wj-dhH"/>
+                                        <constraint firstItem="A8F-ze-Man" firstAttribute="centerX" secondItem="4MN-Og-H2f" secondAttribute="centerX" id="pcv-HB-V3L"/>
+                                        <constraint firstAttribute="bottom" secondItem="A8F-ze-Man" secondAttribute="bottom" constant="8" id="t4y-WJ-X5I"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="personFilmLabel" destination="A8F-ze-Man" id="UWN-kO-DmO"/>
+                                    <outlet property="personNameLabel" destination="PI6-Gt-ICe" id="aYj-Gk-EUR"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Vra-mk-C0b" id="eW8-lw-q9T"/>
+                            <outlet property="delegate" destination="Vra-mk-C0b" id="vd3-Kd-dXe"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2g9-St-nnv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-235" y="-2"/>
+        </scene>
+    </scenes>
+</document>
